@@ -1,0 +1,34 @@
+<div class="landing-container">
+  <h1 class="gradient-text"
+      [ngStyle]="{'background':'-webkit-linear-gradient(left,' + primaryColor + ', ' + secondaryColor + ')'}">beautifulgradients</h1>
+
+  <div id="introduction">
+    <p>Generate similar colors for your project. Place the primary and secondary color of your website. Get the gradient of colors between them.</p>
+  </div>
+
+  <div id="generator">
+    <div class="row">
+      <div class="generator-item col-md-4 text-left">
+        <span>A</span>
+        <input [colorPicker]="primaryColor" (colorPickerChange)="onChangePrimaryColor($event)" [cpOutputFormat]='outputFormat'
+               [style.background]="primaryColor" [value]="primaryColor"/>
+      </div>
+      <div class="generator-item col-md-4 text-center"><i (click)="swapColors()" class="fas fa-exchange-alt"></i>      </div>
+      <div class="generator-item col-md-4  text-right">
+        <span>B</span>
+        <input [colorPicker]="secondaryColor" (colorPickerChange)="onChangeSecondaryColor($event)" [cpOutputFormat]='outputFormat'
+               [style.background]="secondaryColor" [value]="secondaryColor"/>
+      </div>
+    </div>
+  </div>
+
+  <div id="gradient">
+    <ul>
+      <li *ngFor="let color of colors; let i = index" [style.backgroundColor]=color>
+        <div> {{color}}</div>
+      </li>
+    </ul>
+  </div>
+
+</div>
+

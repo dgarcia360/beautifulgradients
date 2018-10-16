@@ -1,0 +1,54 @@
+.landing-container > div {
+  margin: 0 auto;
+  max-width: 760px;
+}
+
+h1 {
+  text-align: center;
+}
+
+.gradient-text {
+  -webkit-background-clip: text !important;
+  -webkit-text-fill-color: transparent;
+}
+
+#introduction {
+  text-align: justify;
+  line-height: 2;
+
+}
+
+@media screen and (max-width: 768px) {
+
+  #introduction {
+    padding: 0 20px;
+  }
+}
+
+#generator {
+  font-weight: bold;
+}
+
+@media screen and (max-width: 768px) {
+
+  #generator .generator-item {
+    text-align: center !important;
+    margin-top: 15px;
+  }
+}
+
+#gradient {
+  margin-top: 30px;
+}
+
+ul {
+  padding: 0;
+}
+
+li {
+  list-style: none;
+  height: 50px;
+  text-align: center;
+  color: #fff;
+  padding-top: 15px;
+}
