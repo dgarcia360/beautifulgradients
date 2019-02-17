@@ -14,7 +14,7 @@ cache:
 
 script:
 - npm run lint
-- npm run pages-build --prod  --base-href /beautifulgradients/
+- npm run pages-build
 - mv dist/beautifulgradients/index.html dist/beautifulgradients/404.html
 
 deploy:
