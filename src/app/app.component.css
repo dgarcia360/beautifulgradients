@@ -1,32 +1,35 @@
-.landing-container > div {
+.landing {
   margin: 0 auto;
   max-width: 760px;
 }
 
-h1 {
-  text-align: center;
-}
-
-.gradient-text {
-  -webkit-background-clip: text !important;
-  -webkit-text-fill-color: transparent;
-}
-
 #introduction {
-  text-align: justify;
-  line-height: 2;
-
-}
-
-@media screen and (max-width: 768px) {
-
-  #introduction {
-    padding: 0 20px;
-  }
+  padding: 0 20px;
 }
 
 #generator {
   font-weight: bold;
+}
+
+#generator .swap-colors{
+  margin-top: 12px;
+  color: #181d27;
+  font-size: 20px;
+}
+
+#gradient ul {
+  border-radius: 10px;
+  overflow: hidden;
+  padding: 0;
+  box-shadow: 0 16px 30px rgba(24, 29, 39, .05), 0 20px 30px rgba(24, 29, 39, .05), 0 5px 10px rgba(24, 29, 39, .05);
+}
+
+#gradient li {
+  list-style: none;
+  height: 50px;
+  text-align: center;
+  color: #fff;
+  padding-top: 15px;
 }
 
 @media screen and (max-width: 768px) {
@@ -35,20 +38,12 @@ h1 {
     text-align: center !important;
     margin-top: 15px;
   }
-}
 
-#gradient {
-  margin-top: 30px;
-}
+  #generator .swap-colors{
+    margin: 0px;
+  }
 
-ul {
-  padding: 0;
-}
-
-li {
-  list-style: none;
-  height: 50px;
-  text-align: center;
-  color: #fff;
-  padding-top: 15px;
+  #gradient {
+    padding: 0 20px;
+  }
 }

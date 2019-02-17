@@ -1,28 +1,41 @@
-<div class="landing-container">
-  <h1 class="gradient-text"
-      [ngStyle]="{'background':'-webkit-linear-gradient(left,' + primaryColor + ', ' + secondaryColor + ')'}">beautifulgradients</h1>
-
-  <div id="introduction">
-    <p>Generate similar colors for your project. Place the primary and secondary color of your website. Get the gradient of colors between them.</p>
+<div class="landing">
+  <div id="title" class="gap">
+    <h1 class="text-center">beautifulgradients</h1>
+  </div>
+  <div id="introduction" class="gap text-center">
+    <p>Place a primary and secondary color to generate the gradient between them.</p>
   </div>
 
-  <div id="generator">
+  <div id="generator" class="gap">
     <div class="row">
       <div class="generator-item col-md-4 text-left">
-        <span>A</span>
-        <input [colorPicker]="primaryColor" (colorPickerChange)="onChangePrimaryColor($event)" [cpOutputFormat]='outputFormat'
+        <input [colorPicker]="primaryColor" (colorPickerChange)="onChangePrimaryColor($event)"
+               [cpOutputFormat]='outputFormat'
+               [cpPosition]="'bottom'"
                [style.background]="primaryColor" [value]="primaryColor"/>
       </div>
-      <div class="generator-item col-md-4 text-center"><i (click)="swapColors()" class="fas fa-exchange-alt"></i>      </div>
+      <div class="generator-item col-md-4 text-center"><i (click)="swapColors()" class="swap-colors fas fa-exchange-alt"></i></div>
       <div class="generator-item col-md-4  text-right">
-        <span>B</span>
-        <input [colorPicker]="secondaryColor" (colorPickerChange)="onChangeSecondaryColor($event)" [cpOutputFormat]='outputFormat'
+        <input [colorPicker]="secondaryColor" (colorPickerChange)="onChangeSecondaryColor($event)"
+               [cpOutputFormat]='outputFormat'
+               [cpPosition]="'bottom'"
                [style.background]="secondaryColor" [value]="secondaryColor"/>
+      </div>
+    </div>
+    <div class="row" class="gap">
+      <div class="col-md-12">
+        <mat-slider
+          thumbLabel
+          (ngModel)="steps"
+          (input)="onChangeSlider($event)"
+          tickInterval="1"
+          min="5"
+          max="20"></mat-slider>
       </div>
     </div>
   </div>
 
-  <div id="gradient">
+  <div id="gradient" class="gap">
     <ul>
       <li *ngFor="let color of colors; let i = index" [style.backgroundColor]=color>
         <div> {{color}}</div>
