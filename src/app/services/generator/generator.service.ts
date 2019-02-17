@@ -18,7 +18,7 @@ export class GeneratorService {
   }
 
   convert(color1, color2, steps: number) {
-    let result = [];
+    const result = [];
     for (let _i = 0; _i < steps; _i++) {
       const percent = _i * (steps) / ((steps - 1) * steps);
       const newRed = this.checkColorIntegrity(color1.red + percent * (color2.red - color1.red));
