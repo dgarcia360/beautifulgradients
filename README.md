@@ -6,6 +6,18 @@ Generate auxiliary color tones for your project. Place the primary and secondary
 
 [Website](https://dgarcia360.github.io/beautifulgradients)
 
-# License
+## Roadmap
 
-[BSD-2-Clause](LICENSE.md)
+See the [open issues](https://github.com/dgarcia360/sphinxcontrib-ghcontributors/issues) for a list of proposed features.
+
+## Contributing
+
+Contributions are welcome and appreciated! Check [CONTRIBUTING.md](CONTRIBUTING.md) file.
+
+## License
+
+Copyright (c) 2015 David Garcia ([@dgarcia360](https://davidgarcia.dev>)).
+
+Licensed under BSD-2-Clause (see [LICENSE.md](LICENSE.md) for details)
+
+
